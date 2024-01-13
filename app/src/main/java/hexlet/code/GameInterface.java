@@ -12,7 +12,8 @@ public class GameInterface {
         String question;
         String rightAnswer;
         String usersAnswer;
-        String[] gameInfo = new String[1];
+
+        String[] gameInfo;
 
         Scanner getUsersAnswer = new Scanner(System.in);
 
@@ -23,27 +24,7 @@ public class GameInterface {
 
         while (winCount < maxWins) {
 
-            switch (numberOfGame) {
-
-
-                case 2:
-                    gameInfo = EvenGame.playEvenGame();
-                    break;
-                case 3:
-
-                    gameInfo = CalcGame.playCalcGame();
-                    break;
-                case 4:
-                    gameInfo = GCD_Game.playGCD_Game();
-                    break;
-                case 5:
-                    gameInfo = ProgressionGame.playProgressionGame();
-                    break;
-                case 6:
-                    gameInfo = PrimeGame.PlayPrimeGame();
-                    break;
-
-            }
+            gameInfo = getGameInfo(numberOfGame);
 
             question = gameInfo[0];
             rightAnswer = gameInfo[1];
@@ -90,5 +71,32 @@ public class GameInterface {
                 PrimeGame.showTask();
                 break;
         }
+    }
+    public static String [] getGameInfo (int numberOfGame ){
+
+        String[] gameInfo = new String[1];
+
+        switch (numberOfGame) {
+
+
+            case 2:
+                gameInfo = EvenGame.playEvenGame();
+                break;
+            case 3:
+
+                gameInfo = CalcGame.playCalcGame();
+                break;
+            case 4:
+                gameInfo = GCD_Game.playGCD_Game();
+                break;
+            case 5:
+                gameInfo = ProgressionGame.playProgressionGame();
+                break;
+            case 6:
+                gameInfo = PrimeGame.PlayPrimeGame();
+                break;
+
+        }
+        return gameInfo;
     }
 }
