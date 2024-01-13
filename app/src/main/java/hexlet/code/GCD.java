@@ -2,7 +2,7 @@ package hexlet.code;
 
 
 public class GCD {
-    public static String[] playGCD_Game() {
+    public static String[] playGreatestCommonDivisor() {
 
         int firstNumber;
         int secondNumber;
@@ -13,7 +13,7 @@ public class GCD {
         firstNumber = (int) (Math.random() * 50);
         secondNumber = (int) (Math.random() * 50);
 
-        rightAnswer = searchCommonGreatestDivisor(firstNumber,secondNumber);
+        rightAnswer = searchCommonGreatestDivisor(firstNumber, secondNumber);
 
         question = "" + firstNumber + " " + secondNumber;
 

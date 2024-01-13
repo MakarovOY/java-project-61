@@ -68,6 +68,7 @@ public class GameInterface {
             case 6:
                 PrimeGame.showTask();
                 break;
+            default:
         }
     }
 
@@ -83,7 +84,7 @@ public class GameInterface {
                 gameInfo = CalcGame.playCalcGame();
                 break;
             case 4:
-                gameInfo = GCD.playGCD_Game();
+                gameInfo = GCD.playGreatestCommonDivisor();
                 break;
             case 5:
                 gameInfo = ProgressionGame.playProgressionGame();
@@ -91,6 +92,7 @@ public class GameInterface {
             case 6:
                 gameInfo = PrimeGame.playPrimeGame();
                 break;
+            default:
         }
         return gameInfo;
     }

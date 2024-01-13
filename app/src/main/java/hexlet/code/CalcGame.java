@@ -30,6 +30,7 @@ public class CalcGame {
                 question = "" + x + " * " + y;
                 rightAnswer = x * y;
                 break;
+            default:
         }
         String[] roundInfo = {question, "" + rightAnswer};
         return roundInfo;

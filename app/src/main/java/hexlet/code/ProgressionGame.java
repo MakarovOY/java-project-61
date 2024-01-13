@@ -33,8 +33,7 @@ public class ProgressionGame {
         for (int i = firstNumber,  j = 0; i <= lastNumber; i += step, j++) {
             if (i != numberForReplace) {
                 strJ.add("" + i);
-            }
-            else {
+            } else {
                 strJ.add("..");
             }
         }
