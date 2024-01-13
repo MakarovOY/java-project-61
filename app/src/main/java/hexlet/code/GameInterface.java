@@ -43,10 +43,8 @@ public class GameInterface {
 
             }
 
+            System.out.println("Congratulations, " + userName + "!");
 
-            if (winCount == maxWins) {
-                System.out.println("Congratulations, " + userName + "!");
-            }
         }
 
     }
