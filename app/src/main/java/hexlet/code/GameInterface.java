@@ -8,7 +8,7 @@ public class GameInterface {
 
     public static void playGame (int numberOfGame){
         int winCount = 0;
-        final int MAX_WINS = 3;
+        int maxWins = 3;
         String userName;
         String question;
         String rightAnswer;
@@ -39,7 +39,7 @@ public class GameInterface {
         }
 
 
-        while (winCount < MAX_WINS){
+        while (winCount < maxWins){
 
             switch (numberOfGame){
 
@@ -82,7 +82,7 @@ public class GameInterface {
             }
 
 
-        if (winCount == MAX_WINS){
+        if (winCount == maxWins){
             System.out.println("Congratulations, " + userName +"!");
         }
         }
