@@ -37,8 +37,8 @@ public class GameInterface {
                 System.out.println("Correct!");
                 winCount++;
             } else {
-                System.out.println("'" + usersAnswer + "' is wrong answer ;(. Correct answer was '" + rightAnswer +
-                        "'.\nLet's try again, " + userName);
+                System.out.println("'" + usersAnswer + "' is wrong answer ;(. Correct answer was '" + rightAnswer
+                        + "'.\nLet's try again, " + userName);
                 break;
 
             }
@@ -60,7 +60,7 @@ public class GameInterface {
                 CalcGame.showTask();
                 break;
             case 4:
-                GCD_Game.showTask();
+                GCD.showTask();
                 break;
             case 5:
                 ProgressionGame.showTask();
@@ -70,30 +70,27 @@ public class GameInterface {
                 break;
         }
     }
-    public static String [] getGameInfo (int numberOfGame ){
+
+    public static String[] getGameInfo(int numberOfGame) {
 
         String[] gameInfo = new String[1];
 
         switch (numberOfGame) {
-
-
             case 2:
                 gameInfo = EvenGame.playEvenGame();
                 break;
             case 3:
-
                 gameInfo = CalcGame.playCalcGame();
                 break;
             case 4:
-                gameInfo = GCD_Game.playGCD_Game();
+                gameInfo = GCD.playGCD_Game();
                 break;
             case 5:
                 gameInfo = ProgressionGame.playProgressionGame();
                 break;
             case 6:
-                gameInfo = PrimeGame.PlayPrimeGame();
+                gameInfo = PrimeGame.playPrimeGame();
                 break;
-
         }
         return gameInfo;
     }
