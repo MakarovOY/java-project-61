@@ -10,13 +10,27 @@ public class GCD {
         String question;
         int rightAnswer;
 
-        rightAnswer = 0;
+        firstNumber = (int) (Math.random() * 50);
+        secondNumber = (int) (Math.random() * 50);
 
+        rightAnswer = searchCommonGreatestDivisor(firstNumber,secondNumber);
 
-        firstNumber =  (int) (Math.random() * 50);
-        secondNumber =  (int) (Math.random() * 50);
+        question = "" + firstNumber + " " + secondNumber;
+
+        String[] roundInfo = {question, "" + rightAnswer};
+
+        return roundInfo;
+
+    }
+
+    public static void showTask() {
+        System.out.println("Find the greatest common divisor of given numbers.");
+    }
+
+    public static int searchCommonGreatestDivisor(int firstNumber, int secondNumber) {
         int maxNumber;
         int minNumber;
+        int commonGreatestDivision = 0;
         if (firstNumber > secondNumber) {
             maxNumber = firstNumber;
             minNumber = secondNumber;
@@ -29,18 +43,11 @@ public class GCD {
             int res1 = maxNumber % i;
             int res2 = minNumber % i;
             if (res1 == 0 && res2 == 0) {
-                rightAnswer = i;
+                commonGreatestDivision = i;
                 break;
             }
         }
-        question = "" + firstNumber + " " + secondNumber;
-
-        String[] roundInfo =  {question, "" + rightAnswer};
-
-        return roundInfo;
-
+        return commonGreatestDivision;
     }
-    public static void showTask() {
-        System.out.println("Find the greatest common divisor of given numbers.");
-    }
+
 }

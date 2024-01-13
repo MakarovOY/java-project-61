@@ -10,11 +10,9 @@ public class ProgressionGame {
         String question;
 
         int rightAnswer;
-
         int firstNumber;
         int quantityOfNumbers;
         int step;
-
 
 
         int positionForReplace;
