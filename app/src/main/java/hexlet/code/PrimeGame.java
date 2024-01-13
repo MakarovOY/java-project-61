@@ -22,8 +22,6 @@ public class PrimeGame {
                     ifPrimeNumber = false;
                     break;
                 }
-                else
-                {ifPrimeNumber = true;}
 
             }
 
