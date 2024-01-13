@@ -25,6 +25,7 @@ public class GCD_Game {
                 maxNumber = secondNumber;
                 minNumber =firstNumber;
             }
+
             for(int i = minNumber; i> 0; i -- ){
                 int res1 = maxNumber % i;
                 int res2 = minNumber % i;

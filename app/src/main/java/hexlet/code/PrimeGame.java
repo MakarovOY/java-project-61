@@ -9,29 +9,27 @@ public class PrimeGame {
         int question;
 
         int numberToGuess;
+
         String rightAnswer;
 
-        boolean primeNumber = true;
+        boolean ifPrimeNumber = true ;
 
 
             numberToGuess = (int) (2+ (Math.random()*48));
 
             for(int i = 2; i < numberToGuess; i++ ){
                 if((numberToGuess % i) == 0){
-                    primeNumber = false;
+                    ifPrimeNumber = false;
                     break;
                 }
-
-                primeNumber = true;
+                else
+                {ifPrimeNumber = true;}
 
             }
 
-           if(primeNumber) {
-               rightAnswer = "yes";
-           }
-           else {
-               rightAnswer = "no";
-           }
+            rightAnswer = ifPrimeNumber  ? "yes" : "no";
+
+
            question = numberToGuess;
 
             String [] roundInfo =  {"" + question,  rightAnswer};
