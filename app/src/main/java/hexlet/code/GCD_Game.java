@@ -4,29 +4,26 @@ package hexlet.code;
 public class GCD_Game {
     public static String[] playGCD_Game(){
 
-        int x;
-        int y;
-
+        int firstNumber;
+        int secondNumber;
 
         String question;
         int rightAnswer ;
 
-
-//        question = "";
         rightAnswer = 0;
 
 
-            x =  (int) (Math.random() * 50);
-            y =  (int) (Math.random() * 50);
+            firstNumber =  (int) (Math.random() * 50);
+            secondNumber =  (int) (Math.random() * 50);
             int maxNumber;
             int minNumber;
-            if (x>y){
-                maxNumber = x;
-                minNumber =y;
+            if (firstNumber>secondNumber){
+                maxNumber = firstNumber;
+                minNumber =secondNumber;
             }
             else {
-                maxNumber = y;
-                minNumber =x;
+                maxNumber = secondNumber;
+                minNumber =firstNumber;
             }
             for(int i = minNumber; i> 0; i -- ){
                 int res1 = maxNumber % i;
@@ -36,11 +33,12 @@ public class GCD_Game {
                     break;
                 }
             }
-            question = "" + x + " " + y;
+            question = "" + firstNumber + " " + secondNumber;
 
         String [] roundInfo =  {question, "" + rightAnswer};
 
         return roundInfo;
+
 
 
     }
