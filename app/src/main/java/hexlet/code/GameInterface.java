@@ -43,10 +43,8 @@ public class GameInterface {
 
             }
 
-            System.out.println("Congratulations, " + userName + "!");
-
         }
-
+        System.out.println("Congratulations, " + userName + "!");
     }
 
     public static void showGameTasToUser(int numberOfGame) {

@@ -29,6 +29,7 @@ public class App {
             case 5:
             case 6:
                 GameInterface.playGame(usersChoice);
+                break;
             default:
                 System.out.println("You entered wrong number.Try again.");
         }

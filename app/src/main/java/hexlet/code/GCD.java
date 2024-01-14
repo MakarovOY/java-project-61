@@ -3,15 +3,16 @@ package hexlet.code;
 
 public class GCD {
     public static String[] playGreatestCommonDivisor() {
-
+        int minNumber = 1;
+        int maxNumber = 2;
         int firstNumber;
         int secondNumber;
 
         String question;
         int rightAnswer;
 
-        firstNumber = (int) (Math.random() * 50);
-        secondNumber = (int) (Math.random() * 50);
+        firstNumber = Util.getRandomNumber(minNumber,maxNumber);
+        secondNumber = Util.getRandomNumber(minNumber,maxNumber);
 
         rightAnswer = searchCommonGreatestDivisor(firstNumber, secondNumber);
 

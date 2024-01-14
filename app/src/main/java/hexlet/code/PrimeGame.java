@@ -4,8 +4,11 @@ package hexlet.code;
 
 
 public class PrimeGame {
-    public static String[] playPrimeGame() {
 
+    final static int MIN_PRIME_NUMBER = 2;
+
+    public static String[] playPrimeGame() {
+        int maxNumber = 50;
         int question;
 
         int numberToGuess;
@@ -15,7 +18,7 @@ public class PrimeGame {
         boolean ifPrimeNumber = true;
 
 
-        numberToGuess = (int) (2 + (Math.random() * 48));
+        numberToGuess = Util.getRandomNumber(MIN_PRIME_NUMBER, maxNumber);
 
         for (int i = 2; i < numberToGuess; i++) {
             if ((numberToGuess % i) == 0) {

@@ -13,15 +13,19 @@ public class ProgressionGame {
         int firstNumber;
         int quantityOfNumbers;
         int step;
+        int minStep = 2;
+        int maxStep = 10;
+        int minNumberOfProgression = 1;
+        int maxNumberOfProgression = 100;
 
 
         int positionForReplace;
         int numberForReplace;
 
 
-        firstNumber = (int) (1 + (Math.random() * 100));
-        step = (int) (2 + (Math.random() * 8));
-        quantityOfNumbers = (int) (5 + (Math.random() * 6));
+        firstNumber = Util.getRandomNumber(minNumberOfProgression, maxNumberOfProgression);
+        step = Util.getRandomNumber(minStep, maxStep);
+        quantityOfNumbers = Util.getRandomNumber(5,10);
         positionForReplace = (int) (1 + (Math.random() * (quantityOfNumbers)));
 
 

@@ -3,17 +3,18 @@ package hexlet.code;
 
 
 public class EvenGame {
-   // final static int PARITY = 2;
+
     public static String[] playEvenGame() {
-        final int maxNumber = 101;
+        int maxNumber = 100;
+        int minNumber = 1;
         int randomNumberForUser;
-        final  int parity = 2;
 
         String rightAnswer;
 
-        randomNumberForUser = (int) (Math.random() * maxNumber);
+      //  randomNumberForUser = (int) (Math.random() * maxNumber);
+        randomNumberForUser = Util.getRandomNumber(minNumber, maxNumber);
 
-        if (randomNumberForUser % parity == 0) {
+        if (Util.isNumberEven(randomNumberForUser)) {
             rightAnswer = "yes";
         } else {
             rightAnswer = "no";
