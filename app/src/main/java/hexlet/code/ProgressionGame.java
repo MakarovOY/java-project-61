@@ -10,7 +10,7 @@ public class ProgressionGame {
         String question;
 
         int rightAnswer;
-        int firstNumber;
+        int firstNumberOfProgression;
         int quantityOfNumbers;
         int step;
         int minStep = 2;
@@ -23,25 +23,16 @@ public class ProgressionGame {
         int numberForReplace;
 
 
-        firstNumber = Util.getRandomNumber(minNumberOfProgression, maxNumberOfProgression);
+        firstNumberOfProgression = Util.getRandomNumber(minNumberOfProgression, maxNumberOfProgression);
         step = Util.getRandomNumber(minStep, maxStep);
         quantityOfNumbers = Util.getRandomNumber(5,10);
-        positionForReplace = (int) (1 + (Math.random() * (quantityOfNumbers)));
+        positionForReplace = Util.getRandomNumber(minNumberOfProgression, quantityOfNumbers);
 
 
-        int lastNumber = firstNumber + (quantityOfNumbers - 1) * step;
-        numberForReplace = firstNumber + (positionForReplace - 1) * step;
+        int lastNumberOfProgression = firstNumberOfProgression + (quantityOfNumbers) * step;
+        numberForReplace = firstNumberOfProgression + (positionForReplace) * step;
 
-        StringJoiner strJ = new StringJoiner(" ");
-
-        for (int i = firstNumber,  j = 0; i <= lastNumber; i += step, j++) {
-            if (i != numberForReplace) {
-                strJ.add("" + i);
-            } else {
-                strJ.add("..");
-            }
-        }
-        question = strJ.toString();
+        question = getProgressionInString(firstNumberOfProgression, lastNumberOfProgression, numberForReplace, step);
 
         rightAnswer = numberForReplace;
 
@@ -52,6 +43,23 @@ public class ProgressionGame {
     }
     public static void showTask() {
         System.out.println("What number is missing in the progression?.");
+    }
+
+    public static String getProgressionInString(int firstNumber, int lastNumber, int numberForReplace, int step ) {
+
+        StringJoiner strJ = new StringJoiner(" ");
+
+        for (int i = firstNumber; i <= lastNumber; i += step) {
+            if (i != numberForReplace) {
+                strJ.add("" + i);
+            } else {
+                strJ.add("..");
+
+            }
+        }
+
+        return strJ.toString();
+
     }
 
 }
