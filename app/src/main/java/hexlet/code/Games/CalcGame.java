@@ -1,5 +1,7 @@
-package hexlet.code;
+package hexlet.code.Games;
 
+
+import hexlet.code.Util;
 
 public class CalcGame {
     static final int NUMBER_OF_EXPRESSIONS = 3;
@@ -13,8 +15,7 @@ public class CalcGame {
         int rightAnswer;
 
         int varOfExpression = Util.getRandomNumber(1,NUMBER_OF_EXPRESSIONS);
-//        firstNumber = (int) (Math.random() * 10);
-//        secondNumber = (int) (Math.random() * 10);
+
         firstNumber = Util.getRandomNumber(0,10);
         secondNumber = Util.getRandomNumber(0,10);
         question = "";

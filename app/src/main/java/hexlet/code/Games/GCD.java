@@ -1,5 +1,7 @@
-package hexlet.code;
+package hexlet.code.Games;
 
+
+import hexlet.code.Util;
 
 public class GCD {
     public static String[] playGreatestCommonDivisor() {

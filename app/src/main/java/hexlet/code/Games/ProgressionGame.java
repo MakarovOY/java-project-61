@@ -1,6 +1,8 @@
-package hexlet.code;
+package hexlet.code.Games;
 
 
+
+import hexlet.code.Util;
 
 import java.util.StringJoiner;
 

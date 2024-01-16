@@ -9,6 +9,7 @@ public class App {
         userInterface();
     }
     public static void userInterface() {
+        String userName;
         Scanner forUsersChoice = new Scanner(System.in);
         int usersChoice;
         System.out.println("Please enter the game number and press"
@@ -21,7 +22,9 @@ public class App {
             case 0:
                 break;
             case 1:
-                Cli.greetings();
+                GameInterface.greet();
+                userName = GameInterface.getUserName();
+                GameInterface.sayHalloByName(userName);
                 break;
             case 2:
             case 3:

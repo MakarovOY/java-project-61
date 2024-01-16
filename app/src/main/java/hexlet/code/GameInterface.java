@@ -1,5 +1,7 @@
 package hexlet.code;
 
+import hexlet.code.Games.*;
+
 import java.util.Scanner;
 
 public class GameInterface {
@@ -17,9 +19,11 @@ public class GameInterface {
 
         Scanner getUsersAnswer = new Scanner(System.in);
 
-        userName = Cli.greetings();
+        greet();
+        userName = getUserName();
+        sayHalloByName(userName);
 
-        showGameTasToUser(numberOfGame);
+        showGameTaskToUser(numberOfGame);
 
 
         while (winCount < maxWins) {
@@ -47,7 +51,7 @@ public class GameInterface {
         System.out.println("Congratulations, " + userName + "!");
     }
 
-    public static void showGameTasToUser(int numberOfGame) {
+    public static void showGameTaskToUser(int numberOfGame) {
 
         switch (numberOfGame) {
 
@@ -93,5 +97,16 @@ public class GameInterface {
             default:
         }
         return gameInfo;
+    }
+        public static void greet(){
+        System.out.println("Welcome to the Brain Games!");
+    }
+    public static String getUserName(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("May I have your name?");
+        return  scanner.next();
+    }
+    public static void sayHalloByName(String userName){
+        System.out.println("Hello, " + userName + "!");
     }
 }
