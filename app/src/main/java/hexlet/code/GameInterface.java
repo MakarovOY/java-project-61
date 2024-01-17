@@ -9,7 +9,7 @@ public class GameInterface {
 
     public static void playGame(int numberOfGame) {
         int winCount = 0;
-        int maxWins = 3;
+        int maxWins = 3 ;
         String userName;
         String question;
         String rightAnswer;
@@ -48,7 +48,9 @@ public class GameInterface {
             }
 
         }
-        System.out.println("Congratulations, " + userName + "!");
+        if (winCount == maxWins){
+            System.out.println("Congratulations, " + userName + "!");
+        }
     }
 
     public static void showGameTaskToUser(int numberOfGame) {
@@ -109,4 +111,6 @@ public class GameInterface {
     public static void sayHalloByName(String userName){
         System.out.println("Hello, " + userName + "!");
     }
+
+    //public static void congratulateWinner(String userName, int )
 }
