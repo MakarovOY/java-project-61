@@ -5,8 +5,9 @@ import hexlet.code.Util;
 
 public class EvenGame {
 
-    public static String[] playEvenGame() {
+    public static String[] generateGameResult() {
         int maxNumber = 100;
+
         int minNumber = 1;
         int randomNumberForUser;
 

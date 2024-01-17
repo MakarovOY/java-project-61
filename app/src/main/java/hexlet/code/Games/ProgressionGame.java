@@ -7,9 +7,10 @@ import hexlet.code.Util;
 import java.util.StringJoiner;
 
 public class ProgressionGame {
-    public static String[] playProgressionGame() {
+    public static String[] generateGameResult() {
 
         String question;
+
 
         int rightAnswer;
         int firstNumberOfProgression;
@@ -27,7 +28,7 @@ public class ProgressionGame {
 
         firstNumberOfProgression = Util.getRandomNumber(minNumberOfProgression, maxNumberOfProgression);
         step = Util.getRandomNumber(minStep, maxStep);
-        quantityOfNumbers = Util.getRandomNumber(5,10);
+        quantityOfNumbers = Util.getRandomNumber(5, 10);
         positionForReplace = Util.getRandomNumber(minNumberOfProgression, quantityOfNumbers);
 
 
@@ -47,7 +48,7 @@ public class ProgressionGame {
         System.out.println("What number is missing in the progression?.");
     }
 
-    public static String getProgressionInString(int firstNumber, int lastNumber, int numberForReplace, int step ) {
+    public static String getProgressionInString(int firstNumber, int lastNumber, int numberForReplace, int step) {
 
         StringJoiner strJ = new StringJoiner(" ");
 

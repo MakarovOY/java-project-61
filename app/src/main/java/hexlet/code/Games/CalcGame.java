@@ -5,7 +5,7 @@ import hexlet.code.Util;
 
 public class CalcGame {
     static final int NUMBER_OF_EXPRESSIONS = 3;
-    public static String[] playCalcGame() {
+    public static String[] generateGameResult() {
 
 
         int firstNumber;
@@ -14,10 +14,10 @@ public class CalcGame {
         String question;
         int rightAnswer;
 
-        int varOfExpression = Util.getRandomNumber(1,NUMBER_OF_EXPRESSIONS);
+        int varOfExpression = Util.getRandomNumber(1, NUMBER_OF_EXPRESSIONS);
 
-        firstNumber = Util.getRandomNumber(0,10);
-        secondNumber = Util.getRandomNumber(0,10);
+        firstNumber = Util.getRandomNumber(0, 10);
+        secondNumber = Util.getRandomNumber(0, 10);
         question = "";
         rightAnswer = 0;
 

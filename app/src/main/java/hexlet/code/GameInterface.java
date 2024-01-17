@@ -1,15 +1,19 @@
 package hexlet.code;
 
-import hexlet.code.Games.*;
+import hexlet.code.Games.CalcGame;
+import hexlet.code.Games.EvenGame;
+import hexlet.code.Games.GCD;
+import hexlet.code.Games.PrimeGame;
+import hexlet.code.Games.ProgressionGame;
 
 import java.util.Scanner;
 
 public class GameInterface {
 
-
+    static final int MAX_WINS = 3;
     public static void playGame(int numberOfGame) {
         int winCount = 0;
-        int maxWins = 3 ;
+       //int maxWins = 3 ;
         String userName;
         String question;
         String rightAnswer;
@@ -26,7 +30,7 @@ public class GameInterface {
         showGameTaskToUser(numberOfGame);
 
 
-        while (winCount < maxWins) {
+        while (winCount < MAX_WINS) {
 
             gameInfo = getGameInfo(numberOfGame);
 
@@ -48,9 +52,8 @@ public class GameInterface {
             }
 
         }
-        if (winCount == maxWins){
-            System.out.println("Congratulations, " + userName + "!");
-        }
+
+        congratulateWinner(userName, winCount);
     }
 
     public static void showGameTaskToUser(int numberOfGame) {
@@ -82,35 +85,39 @@ public class GameInterface {
 
         switch (numberOfGame) {
             case 2:
-                gameInfo = EvenGame.playEvenGame();
+                gameInfo = EvenGame.generateGameResult();
                 break;
             case 3:
-                gameInfo = CalcGame.playCalcGame();
+                gameInfo = CalcGame.generateGameResult();
                 break;
             case 4:
-                gameInfo = GCD.playGreatestCommonDivisor();
+                gameInfo = GCD.generateGameResult();
                 break;
             case 5:
-                gameInfo = ProgressionGame.playProgressionGame();
+                gameInfo = ProgressionGame.generateGameResult();
                 break;
             case 6:
-                gameInfo = PrimeGame.playPrimeGame();
+                gameInfo = PrimeGame.generateGameResult();
                 break;
             default:
         }
         return gameInfo;
     }
-        public static void greet(){
+    public static void greet() {
         System.out.println("Welcome to the Brain Games!");
     }
-    public static String getUserName(){
+    public static String getUserName() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("May I have your name?");
         return  scanner.next();
     }
-    public static void sayHalloByName(String userName){
+    public static void sayHalloByName(String userName) {
         System.out.println("Hello, " + userName + "!");
     }
 
-    //public static void congratulateWinner(String userName, int )
+    public static void congratulateWinner(String userName, int winCount) {
+        if (winCount == MAX_WINS) {
+            System.out.println("Congratulations, " + userName + "!");
+        }
+    }
 }

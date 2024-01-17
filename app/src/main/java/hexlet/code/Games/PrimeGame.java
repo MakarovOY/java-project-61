@@ -5,11 +5,12 @@ import hexlet.code.Util;
 
 public class PrimeGame {
 
-    final static int MIN_PRIME_NUMBER = 2;
+    static final int MIN_PRIME_NUMBER = 2;
 
-    public static String[] playPrimeGame() {
+    public static String[] generateGameResult() {
         int maxNumber = 50;
         int question;
+
 
         int numberToGuess;
 
