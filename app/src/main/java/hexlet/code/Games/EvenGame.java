@@ -13,7 +13,6 @@ public class EvenGame {
 
         String rightAnswer;
 
-      //  randomNumberForUser = (int) (Math.random() * maxNumber);
         randomNumberForUser = Util.getRandomNumber(minNumber, maxNumber);
 
         if (Util.isNumberEven(randomNumberForUser)) {
