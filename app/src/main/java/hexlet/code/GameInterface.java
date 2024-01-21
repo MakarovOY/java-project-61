@@ -46,7 +46,7 @@ public class GameInterface {
                 winCount++;
             } else {
                 System.out.println("'" + usersAnswer + "' is wrong answer ;(. Correct answer was '" + rightAnswer
-                        + "'.\nLet's try again, " + userName);
+                        + "'.\nLet's try again, " + userName + "!");
                 break;
 
             }
