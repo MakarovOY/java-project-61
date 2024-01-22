@@ -13,7 +13,6 @@ public class GameInterface {
     static final int MAX_WINS = 3;
     public static void playGame(int numberOfGame) {
         int winCount = 0;
-       //int maxWins = 3 ;
         String userName;
         String question;
         String rightAnswer;

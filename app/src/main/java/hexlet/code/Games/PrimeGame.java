@@ -40,6 +40,6 @@ public class PrimeGame {
     }
 
     public static void showTask() {
-        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'");
+        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
     }
 }
