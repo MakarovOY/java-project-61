@@ -4,6 +4,11 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class App {
+    public static final int GAME_EVEN = 2;
+    public static final int GAME_CALC = 3;
+    public static final int GAME_GCD = 4;
+    public static final int GAME_PROGRESSION = 5;
+    public static final int GAME_PRIME = 6;
 
     public static void main(String[] args) {
         userInterface();
@@ -18,6 +23,7 @@ public class App {
         usersChoice =  forUsersChoice.nextInt();
 
 
+
         switch (usersChoice) {
             case 0:
                 break;
@@ -26,11 +32,11 @@ public class App {
                 userName = GameInterface.getUserName();
                 GameInterface.sayHalloByName(userName);
                 break;
-            case 2:
-            case 3:
-            case 4:
-            case 5:
-            case 6:
+            case GAME_EVEN:
+            case GAME_CALC:
+            case GAME_GCD:
+            case GAME_PROGRESSION:
+            case GAME_PRIME:
                 GameInterface.playGame(usersChoice);
                 break;
             default:

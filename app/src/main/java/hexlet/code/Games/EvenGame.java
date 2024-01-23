@@ -4,16 +4,16 @@ package hexlet.code.Games;
 import hexlet.code.Util;
 
 public class EvenGame {
+    static final int MIN_NUMBER = 1;
+    static final int MAX_NUMBER = 100;
 
     public static String[] generateGameResult() {
-        int maxNumber = 100;
 
-        int minNumber = 1;
         int randomNumberForUser;
 
         String rightAnswer;
 
-        randomNumberForUser = Util.getRandomNumber(minNumber, maxNumber);
+        randomNumberForUser = Util.getRandomNumber(MIN_NUMBER, MAX_NUMBER);
 
         if (Util.isNumberEven(randomNumberForUser)) {
             rightAnswer = "yes";

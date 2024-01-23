@@ -10,6 +10,13 @@ import java.util.Scanner;
 
 public class GameInterface {
 
+    public static final int GAME_EVEN = 2;
+    public static final int GAME_CALC = 3;
+    public static final int GAME_GCD = 4;
+    public static final int GAME_PROGRESSION = 5;
+    public static final int GAME_PRIME = 6;
+
+
     static final int MAX_WINS = 3;
     public static void playGame(int numberOfGame) {
         int winCount = 0;
@@ -59,19 +66,19 @@ public class GameInterface {
 
         switch (numberOfGame) {
 
-            case 2:
+            case GAME_EVEN:
                 EvenGame.showTask();
                 break;
-            case 3:
+            case GAME_CALC:
                 CalcGame.showTask();
                 break;
-            case 4:
+            case GAME_GCD:
                 GCD.showTask();
                 break;
-            case 5:
+            case GAME_PROGRESSION:
                 ProgressionGame.showTask();
                 break;
-            case 6:
+            case GAME_PRIME:
                 PrimeGame.showTask();
                 break;
             default:
@@ -83,19 +90,19 @@ public class GameInterface {
         String[] gameInfo = new String[1];
 
         switch (numberOfGame) {
-            case 2:
+            case GAME_EVEN:
                 gameInfo = EvenGame.generateGameResult();
                 break;
-            case 3:
+            case GAME_CALC:
                 gameInfo = CalcGame.generateGameResult();
                 break;
-            case 4:
+            case GAME_GCD:
                 gameInfo = GCD.generateGameResult();
                 break;
-            case 5:
+            case GAME_PROGRESSION:
                 gameInfo = ProgressionGame.generateGameResult();
                 break;
-            case 6:
+            case GAME_PRIME:
                 gameInfo = PrimeGame.generateGameResult();
                 break;
             default:

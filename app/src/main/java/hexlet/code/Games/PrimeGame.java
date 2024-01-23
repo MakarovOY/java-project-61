@@ -6,9 +6,10 @@ import hexlet.code.Util;
 public class PrimeGame {
 
     static final int MIN_PRIME_NUMBER = 2;
+    static final int MAX_NUMBER = 50;
 
     public static String[] generateGameResult() {
-        int maxNumber = 50;
+
         int question;
 
 
@@ -19,7 +20,7 @@ public class PrimeGame {
         boolean ifPrimeNumber = true;
 
 
-        numberToGuess = Util.getRandomNumber(MIN_PRIME_NUMBER, maxNumber);
+        numberToGuess = Util.getRandomNumber(MIN_PRIME_NUMBER, MAX_NUMBER);
 
         for (int i = 2; i < numberToGuess; i++) {
             if ((numberToGuess % i) == 0) {

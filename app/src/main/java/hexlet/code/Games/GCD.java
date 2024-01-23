@@ -4,18 +4,19 @@ package hexlet.code.Games;
 import hexlet.code.Util;
 
 public class GCD {
+    static final int MIN_NUMBER = 2;
+    static final int MAX_NUMBER = 50;
 
     public static String[] generateGameResult() {
-        int minNumber = 2;
-        int maxNumber = 50;
+
         int firstNumber;
         int secondNumber;
 
         String question;
         int rightAnswer;
 
-        firstNumber = Util.getRandomNumber(minNumber, maxNumber);
-        secondNumber = Util.getRandomNumber(minNumber, maxNumber);
+        firstNumber = Util.getRandomNumber(MIN_NUMBER, MAX_NUMBER);
+        secondNumber = Util.getRandomNumber(MIN_NUMBER, MAX_NUMBER);
 
         rightAnswer = searchCommonGreatestDivisor(firstNumber, secondNumber);
 

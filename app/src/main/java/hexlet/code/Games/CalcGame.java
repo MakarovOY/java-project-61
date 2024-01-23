@@ -4,7 +4,11 @@ package hexlet.code.Games;
 import hexlet.code.Util;
 
 public class CalcGame {
-    static final int NUMBER_OF_EXPRESSIONS = 3;
+    public static final int NUMBER_OF_EXPRESSIONS = 3;
+    public static final int ADDITION = 1;
+    public static final int SUBTRACTION = 2;
+    public static final int MULTIPLICATION = 3;
+    static final int MAX_RANDOM_NUMBER = 2;
     public static String[] generateGameResult() {
 
 
@@ -16,21 +20,21 @@ public class CalcGame {
 
         int varOfExpression = Util.getRandomNumber(1, NUMBER_OF_EXPRESSIONS);
 
-        firstNumber = Util.getRandomNumber(0, 10);
-        secondNumber = Util.getRandomNumber(0, 10);
+        firstNumber = Util.getRandomNumber(0, MAX_RANDOM_NUMBER);
+        secondNumber = Util.getRandomNumber(0, MAX_RANDOM_NUMBER);
         question = "";
         rightAnswer = 0;
 
         switch (varOfExpression) {
-            case 1:
+            case ADDITION:
                 question = "" + firstNumber + " + " + secondNumber;
                 rightAnswer = firstNumber + secondNumber;
                 break;
-            case 2:
+            case SUBTRACTION:
                 question = "" + firstNumber + " - " + secondNumber;
                 rightAnswer = firstNumber - secondNumber;
                 break;
-            case 3:
+            case MULTIPLICATION:
                 question = "" + firstNumber + " * " + secondNumber;
                 rightAnswer = firstNumber * secondNumber;
                 break;
