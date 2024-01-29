@@ -2,6 +2,7 @@ package hexlet.code.Games;
 
 
 
+import hexlet.code.GameEngine;
 import hexlet.code.Util;
 
 import java.util.StringJoiner;
@@ -15,10 +16,10 @@ public class ProgressionGame {
     static final int MAX_STEP = 10;
 
 
-    public static String[] generateGameResult() {
+    public static void generateGameResult() {
 
         String question;
-
+        String gameTask = "What number is missing in the progression?.";
 
         int rightAnswer;
         int firstNumberOfProgression;
@@ -26,29 +27,31 @@ public class ProgressionGame {
         int step;
         int positionForReplace;
         int numberForReplace;
+        String [][] roundInfo = new String [GameEngine.MAX_WINS][GameEngine.PAIR_QUESTION_ANSWER];
+
+        for (int i =0; i<3; i ++) {
+
+            firstNumberOfProgression = Util.getRandomNumber(MIN_NUMBER_OF_PROGRESSION, MAX_NUMBER_OF_PROGRESSION);
+            step = Util.getRandomNumber(MIN_STEP, MAX_STEP);
+            quantityOfNumbers = Util.getRandomNumber(MIN_NUMBER_OF_QUANTITY, MAX_NUMBER_OF_QUANTITY);
+            positionForReplace = Util.getRandomNumber(MIN_NUMBER_OF_PROGRESSION, quantityOfNumbers);
 
 
-        firstNumberOfProgression = Util.getRandomNumber(MIN_NUMBER_OF_PROGRESSION, MAX_NUMBER_OF_PROGRESSION);
-        step = Util.getRandomNumber(MIN_STEP, MAX_STEP);
-        quantityOfNumbers = Util.getRandomNumber(MIN_NUMBER_OF_QUANTITY, MAX_NUMBER_OF_QUANTITY);
-        positionForReplace = Util.getRandomNumber(MIN_NUMBER_OF_PROGRESSION, quantityOfNumbers);
+            int lastNumberOfProgression = firstNumberOfProgression + (quantityOfNumbers) * step;
+            numberForReplace = firstNumberOfProgression + (positionForReplace) * step;
 
+            question = getProgressionInString(firstNumberOfProgression, lastNumberOfProgression, numberForReplace, step);
 
-        int lastNumberOfProgression = firstNumberOfProgression + (quantityOfNumbers) * step;
-        numberForReplace = firstNumberOfProgression + (positionForReplace) * step;
+            rightAnswer = numberForReplace;
 
-        question = getProgressionInString(firstNumberOfProgression, lastNumberOfProgression, numberForReplace, step);
+            roundInfo[i][0] = question;
 
-        rightAnswer = numberForReplace;
+            roundInfo[i][1] ="" + rightAnswer;
 
-        String[] roundInfo =  {question, "" + rightAnswer};
-        return roundInfo;
-
-
+        }
+        GameEngine.playGame(gameTask, roundInfo);
     }
-    public static void showTask() {
-        System.out.println("What number is missing in the progression?.");
-    }
+
 
     public static String getProgressionInString(int firstNumber, int lastNumber, int numberForReplace, int step) {
 

@@ -1,6 +1,8 @@
 package hexlet.code.Games;
 
 
+import hexlet.code.App;
+import hexlet.code.GameEngine;
 import hexlet.code.Util;
 
 public class CalcGame {
@@ -9,44 +11,52 @@ public class CalcGame {
     public static final int SUBTRACTION = 2;
     public static final int MULTIPLICATION = 3;
     static final int MAX_RANDOM_NUMBER = 2;
-    public static String[] generateGameResult() {
+    public static void  generateGameResult() {
 
 
         int firstNumber;
         int secondNumber;
 
         String question;
-        int rightAnswer;
+        String gameTask = "What is the result of the expression?";
+        String rightAnswer;
 
-        int varOfExpression = Util.getRandomNumber(1, NUMBER_OF_EXPRESSIONS);
+        String [][] roundInfo = new String [GameEngine.MAX_WINS][GameEngine.PAIR_QUESTION_ANSWER];
 
-        firstNumber = Util.getRandomNumber(0, MAX_RANDOM_NUMBER);
-        secondNumber = Util.getRandomNumber(0, MAX_RANDOM_NUMBER);
-        question = "";
-        rightAnswer = 0;
+        for (int i =0; i<3; i ++) {
 
-        switch (varOfExpression) {
-            case ADDITION:
-                question = "" + firstNumber + " + " + secondNumber;
-                rightAnswer = firstNumber + secondNumber;
-                break;
-            case SUBTRACTION:
-                question = "" + firstNumber + " - " + secondNumber;
-                rightAnswer = firstNumber - secondNumber;
-                break;
-            case MULTIPLICATION:
-                question = "" + firstNumber + " * " + secondNumber;
-                rightAnswer = firstNumber * secondNumber;
-                break;
-            default:
+
+            int varOfExpression = Util.getRandomNumber(1, NUMBER_OF_EXPRESSIONS);
+
+            firstNumber = Util.getRandomNumber(0, MAX_RANDOM_NUMBER);
+            secondNumber = Util.getRandomNumber(0, MAX_RANDOM_NUMBER);
+            question = "";
+            rightAnswer = "";
+
+
+            switch (varOfExpression) {
+                case ADDITION:
+                    question = "" + firstNumber + " + " + secondNumber;
+                    rightAnswer = "" + (firstNumber + secondNumber);
+                    break;
+                case SUBTRACTION:
+                    question = "" + firstNumber + " - " + secondNumber;
+                    rightAnswer = "" + (firstNumber - secondNumber);
+                    break;
+                case MULTIPLICATION:
+                    question = "" + firstNumber + " * " + secondNumber;
+                    rightAnswer = "" + (firstNumber * secondNumber);
+                    break;
+                default:
+                    System.out.println();
+            }
+            roundInfo[i][0] = question;
+            roundInfo[i][1] = rightAnswer;
         }
-        String[] roundInfo = {question, "" + rightAnswer};
-        return roundInfo;
 
-    }
+        GameEngine.playGame(gameTask, roundInfo );
 
-    public static void showTask() {
-        System.out.println("What is the result of the expression?");
+
     }
 
 

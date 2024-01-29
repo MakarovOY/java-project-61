@@ -1,9 +1,13 @@
 package hexlet.code;
 
 
+import hexlet.code.Games.*;
+
 import java.util.Scanner;
 
 public class App {
+    public static final int EXIT = 0;
+    public static final int GREET = 1;
     public static final int GAME_EVEN = 2;
     public static final int GAME_CALC = 3;
     public static final int GAME_GCD = 4;
@@ -11,9 +15,9 @@ public class App {
     public static final int GAME_PRIME = 6;
 
     public static void main(String[] args) {
-        userInterface();
+        chooseGame();
     }
-    public static void userInterface() {
+    public static void chooseGame() {
         String userName;
         Scanner forUsersChoice = new Scanner(System.in);
         int usersChoice;
@@ -25,23 +29,30 @@ public class App {
 
 
         switch (usersChoice) {
-            case 0:
+            case EXIT:
                 break;
-            case 1:
-                GameInterface.greet();
-                userName = GameInterface.getUserName();
-                GameInterface.sayHalloByName(userName);
+            case GREET:
+               Cli.greet();
                 break;
             case GAME_EVEN:
+                EvenGame.generateGameResult();
+                break;
             case GAME_CALC:
+                CalcGame.generateGameResult();
+                break;
             case GAME_GCD:
+                GCD.generateGameResult();
+                break;
             case GAME_PROGRESSION:
+                ProgressionGame.generateGameResult();
+                break;
             case GAME_PRIME:
-                GameInterface.playGame(usersChoice);
+                PrimeGame.generateGameResult();
                 break;
             default:
                 System.out.println("You entered wrong number.Try again.");
         }
 
     }
+
 }
