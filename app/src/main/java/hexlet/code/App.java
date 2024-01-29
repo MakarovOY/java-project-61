@@ -15,16 +15,22 @@ public class App {
     public static final int GAME_PRIME = 6;
 
     public static void main(String[] args) {
-        chooseGame();
-    }
-    public static void chooseGame() {
-        String userName;
         Scanner forUsersChoice = new Scanner(System.in);
         int usersChoice;
         System.out.println("Please enter the game number and press"
                 + " Enter.\n1 - Greet\n2 - Even\n3 - Calc\n4 - GCD \n5 - Progression\n6 - Prime\n0 - Exit");
         System.out.println("Your choice: ");
         usersChoice =  forUsersChoice.nextInt();
+        chooseGame(usersChoice);
+    }
+    public static void chooseGame(int usersChoice) {
+
+//        Scanner forUsersChoice = new Scanner(System.in);
+//        int usersChoice;
+//        System.out.println("Please enter the game number and press"
+//                + " Enter.\n1 - Greet\n2 - Even\n3 - Calc\n4 - GCD \n5 - Progression\n6 - Prime\n0 - Exit");
+//        System.out.println("Your choice: ");
+//        usersChoice =  forUsersChoice.nextInt();
 
 
 

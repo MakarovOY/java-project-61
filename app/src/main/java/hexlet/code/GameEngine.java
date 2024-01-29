@@ -22,6 +22,8 @@ public class GameEngine {
         userName =  scanner.next();
         System.out.println("Hello, " + userName);
 
+        System.out.println(gameTask);
+
         while (winCount < MAX_WINS) {
 
 
