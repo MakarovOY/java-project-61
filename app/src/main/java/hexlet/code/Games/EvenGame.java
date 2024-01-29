@@ -13,7 +13,7 @@ public class EvenGame {
         int randomNumberForUser;
 
         String rightAnswer;
-        String gameTask = "What is the result of the expression?";
+        String gameTask = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
         String [][] roundInfo = new String [GameEngine.MAX_WINS][GameEngine.PAIR_QUESTION_ANSWER];
 
