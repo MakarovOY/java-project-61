@@ -34,7 +34,7 @@ public class CalcGame {
             rightAnswer = "";
 
             char[] op = {'+', '-', '*'};
-           question =    "" + firstNumber + op[varOfExpression] + secondNumber;
+           question =    "" + firstNumber + " " + op[varOfExpression] + " " + secondNumber;
            if(op[varOfExpression] == '+'){
                rightAnswer = "" + (firstNumber + secondNumber);
            } else if (op[varOfExpression] == '-') {
