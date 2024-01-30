@@ -17,9 +17,9 @@ public class GCD {
         String gameTask = "Find the greatest common divisor of given numbers.";
         int rightAnswer;
 
-        String [][] roundInfo = new String [GameEngine.MAX_WINS][GameEngine.PAIR_QUESTION_ANSWER];
+        String[][] roundInfo = new String[GameEngine.MAX_WINS][GameEngine.PAIR_QUESTION_ANSWER];
 
-        for (int i =0; i<3; i ++) {
+        for (int i = 0; i < 3; i++) {
 
             firstNumber = Util.getRandomNumber(MIN_NUMBER, MAX_NUMBER);
             secondNumber = Util.getRandomNumber(MIN_NUMBER, MAX_NUMBER);
@@ -30,10 +30,10 @@ public class GCD {
 
             roundInfo[i][0] = question;
 
-            roundInfo[i][1] ="" + rightAnswer;
+            roundInfo[i][1] = "" + rightAnswer;
 
         }
-        GameEngine.playGame(gameTask,roundInfo);
+        GameEngine.playGame(gameTask, roundInfo);
     }
 
 

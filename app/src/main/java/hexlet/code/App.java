@@ -1,7 +1,11 @@
 package hexlet.code;
 
 
-import hexlet.code.Games.*;
+import hexlet.code.Games.CalcGame;
+import hexlet.code.Games.EvenGame;
+import hexlet.code.Games.GCD;
+import hexlet.code.Games.PrimeGame;
+import hexlet.code.Games.ProgressionGame;
 
 import java.util.Scanner;
 
@@ -25,20 +29,13 @@ public class App {
     }
     public static void chooseGame(int usersChoice) {
 
-//        Scanner forUsersChoice = new Scanner(System.in);
-//        int usersChoice;
-//        System.out.println("Please enter the game number and press"
-//                + " Enter.\n1 - Greet\n2 - Even\n3 - Calc\n4 - GCD \n5 - Progression\n6 - Prime\n0 - Exit");
-//        System.out.println("Your choice: ");
-//        usersChoice =  forUsersChoice.nextInt();
-
 
 
         switch (usersChoice) {
             case EXIT:
                 break;
             case GREET:
-               Cli.greet();
+                Cli.greet();
                 break;
             case GAME_EVEN:
                 EvenGame.generateGameResult();

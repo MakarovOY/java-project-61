@@ -15,9 +15,9 @@ public class EvenGame {
         String rightAnswer;
         String gameTask = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
-        String [][] roundInfo = new String [GameEngine.MAX_WINS][GameEngine.PAIR_QUESTION_ANSWER];
+        String[][] roundInfo = new String[GameEngine.MAX_WINS][GameEngine.PAIR_QUESTION_ANSWER];
 
-        for (int i =0; i<3; i ++) {
+        for (int i = 0; i < 3; i++) {
 
             randomNumberForUser = Util.getRandomNumber(MIN_NUMBER, MAX_NUMBER);
 

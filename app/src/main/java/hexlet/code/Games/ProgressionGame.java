@@ -27,9 +27,9 @@ public class ProgressionGame {
         int step;
         int positionForReplace;
         int numberForReplace;
-        String [][] roundInfo = new String [GameEngine.MAX_WINS][GameEngine.PAIR_QUESTION_ANSWER];
+        String[][] roundInfo = new String[GameEngine.MAX_WINS][GameEngine.PAIR_QUESTION_ANSWER];
 
-        for (int i =0; i<3; i ++) {
+        for (int i = 0; i < 3; i++) {
 
             firstNumberOfProgression = Util.getRandomNumber(MIN_NUMBER_OF_PROGRESSION, MAX_NUMBER_OF_PROGRESSION);
             step = Util.getRandomNumber(MIN_STEP, MAX_STEP);
@@ -40,13 +40,14 @@ public class ProgressionGame {
             int lastNumberOfProgression = firstNumberOfProgression + (quantityOfNumbers) * step;
             numberForReplace = firstNumberOfProgression + (positionForReplace) * step;
 
-            question = getProgressionInString(firstNumberOfProgression, lastNumberOfProgression, numberForReplace, step);
+            question =
+                    getProgressionInString(firstNumberOfProgression, lastNumberOfProgression, numberForReplace, step);
 
             rightAnswer = numberForReplace;
 
             roundInfo[i][0] = question;
 
-            roundInfo[i][1] ="" + rightAnswer;
+            roundInfo[i][1] = "" + rightAnswer;
 
         }
         GameEngine.playGame(gameTask, roundInfo);

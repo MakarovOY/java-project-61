@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class GameEngine {
 
 
-   public static final int MAX_WINS = 3;
-   public static final int PAIR_QUESTION_ANSWER = 2;
+    public static final int MAX_WINS = 3;
+    public static final int PAIR_QUESTION_ANSWER = 2;
     public static void playGame(String gameTask, String[][] roundInfo) {
         int winCount = 0;
         String userName;
@@ -28,8 +28,8 @@ public class GameEngine {
 
 
             int roundIndex = winCount;
-            question = roundInfo [roundIndex][0];
-            rightAnswer = roundInfo [roundIndex][1];
+            question = roundInfo[roundIndex][0];
+            rightAnswer = roundInfo[roundIndex][1];
 
             System.out.println("Question: " + question);
             System.out.println("Your answer:");
@@ -51,6 +51,5 @@ public class GameEngine {
         }
 
     }
-
 
 }

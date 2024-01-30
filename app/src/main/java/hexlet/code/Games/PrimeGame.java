@@ -21,9 +21,9 @@ public class PrimeGame {
 
         boolean ifPrimeNumber = true;
 
-        String [][] roundInfo = new String [GameEngine.MAX_WINS][GameEngine.PAIR_QUESTION_ANSWER];
+        String[][] roundInfo = new String[GameEngine.MAX_WINS][GameEngine.PAIR_QUESTION_ANSWER];
 
-        for (int i =0; i<3; i ++) {
+        for (int i = 0; i < 3; i++) {
 
 
             numberToGuess = Util.getRandomNumber(MIN_PRIME_NUMBER, MAX_NUMBER);
@@ -41,12 +41,12 @@ public class PrimeGame {
             question = numberToGuess;
 
 
-            roundInfo[i][0] ="" +question;
+            roundInfo[i][0] = ""  + question;
 
-            roundInfo[i][1] ="" + rightAnswer;
+            roundInfo[i][1] = "" + rightAnswer;
 
         }
-        GameEngine.playGame(gameTask,roundInfo);
+        GameEngine.playGame(gameTask, roundInfo);
     }
 
 
