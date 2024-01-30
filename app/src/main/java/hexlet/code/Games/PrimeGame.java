@@ -29,6 +29,7 @@ public class PrimeGame {
             numberToGuess = Util.getRandomNumber(MIN_PRIME_NUMBER, MAX_NUMBER);
 
 
+
             for (int j = MIN_PRIME_NUMBER; j < numberToGuess; j++) {
                 if ((numberToGuess % j) == 0) {
                     ifPrimeNumber = false;
