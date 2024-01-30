@@ -26,7 +26,6 @@ public class GameEngine {
 
         while (winCount < MAX_WINS) {
 
-
             int roundIndex = winCount;
             question = roundInfo[roundIndex][0];
             rightAnswer = roundInfo[roundIndex][1];
