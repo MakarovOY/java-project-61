@@ -21,7 +21,7 @@ public class CalcGame {
 
         String[][] roundInfo = new String[GameEngine.MAX_WINS][GameEngine.PAIR_QUESTION_ANSWER];
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < roundInfo.length; i++) {
 
 
             int varOfExpression = Util.getRandomNumber(0, NUMBER_OF_EXPRESSIONS - 1);
@@ -31,11 +31,11 @@ public class CalcGame {
             question = "";
             rightAnswer = "";
 
-            char[] op = {'+', '-', '*'};
-            question =    "" + firstNumber + " " + op[varOfExpression] + " " + secondNumber;
-            if (op[varOfExpression] == '+') {
+            char[] operators = {'+', '-', '*'};
+            question =    "" + firstNumber + " " + operators[varOfExpression] + " " + secondNumber;
+            if (operators[varOfExpression] == '+') {
                 rightAnswer = "" + (firstNumber + secondNumber);
-            } else if (op[varOfExpression] == '-') {
+            } else if (operators[varOfExpression] == '-') {
                 rightAnswer = "" + (firstNumber - secondNumber);
 
             } else {

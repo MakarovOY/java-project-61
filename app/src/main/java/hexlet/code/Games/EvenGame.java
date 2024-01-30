@@ -17,7 +17,7 @@ public class EvenGame {
 
         String[][] roundInfo = new String[GameEngine.MAX_WINS][GameEngine.PAIR_QUESTION_ANSWER];
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < roundInfo.length; i++) {
 
             randomNumberForUser = Util.getRandomNumber(MIN_NUMBER, MAX_NUMBER);
 

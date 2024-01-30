@@ -29,7 +29,7 @@ public class ProgressionGame {
         int numberForReplace;
         String[][] roundInfo = new String[GameEngine.MAX_WINS][GameEngine.PAIR_QUESTION_ANSWER];
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < roundInfo.length; i++) {
 
             firstNumberOfProgression = Util.getRandomNumber(MIN_NUMBER_OF_PROGRESSION, MAX_NUMBER_OF_PROGRESSION);
             step = Util.getRandomNumber(MIN_STEP, MAX_STEP);
