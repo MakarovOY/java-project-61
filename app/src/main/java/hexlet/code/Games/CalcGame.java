@@ -28,8 +28,7 @@ public class CalcGame {
 
             firstNumber = Util.getRandomNumber(0, MAX_RANDOM_NUMBER);
             secondNumber = Util.getRandomNumber(0, MAX_RANDOM_NUMBER);
-            question = "";
-            rightAnswer = "";
+
 
             char[] operators = {'+', '-', '*'};
             question =    "" + firstNumber + " " + operators[varOfExpression] + " " + secondNumber;
