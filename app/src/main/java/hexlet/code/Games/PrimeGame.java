@@ -19,15 +19,15 @@ public class PrimeGame {
         String rightAnswer;
         String gameTask = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
-        boolean ifPrimeNumber = true;
+
 
         String[][] roundInfo = new String[GameEngine.MAX_WINS][GameEngine.PAIR_QUESTION_ANSWER];
 
         for (int i = 0; i < roundInfo.length; i++) {
 
+            boolean ifPrimeNumber = true;
 
             numberToGuess = Util.getRandomNumber(MIN_PRIME_NUMBER, MAX_NUMBER);
-
 
 
             for (int j = MIN_PRIME_NUMBER; j < numberToGuess; j++) {
