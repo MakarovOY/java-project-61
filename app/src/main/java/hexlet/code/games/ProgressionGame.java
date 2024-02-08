@@ -30,8 +30,7 @@ public class ProgressionGame {
             int step = Util.getRandomNumber(MIN_STEP, MAX_STEP);
             int quantityOfNumbers = Util.getRandomNumber(MIN_NUMBER_OF_QUANTITY, MAX_NUMBER_OF_QUANTITY);
             int positionForReplace = Util.getRandomNumber(MIN_NUMBER_OF_PROGRESSION, quantityOfNumbers);
-            int numberForReplace = firstNumberOfProgression + (positionForReplace) * step;
-
+            int numberForReplace = firstNumberOfProgression + (step * (positionForReplace -1));
             String question =
                     getProgressionInString(firstNumberOfProgression, quantityOfNumbers, numberForReplace, step);
 
@@ -55,7 +54,7 @@ public class ProgressionGame {
         int stepOfProgression = step;
         for (int i = 0; i < quantityOfNumbers; i++) {
             if (numberOfProgression != numberForReplace) {
-                strJ.add("" + numberOfProgression);
+                strJ.add(String.valueOf(numberOfProgression));
                 numberOfProgression = numberOfProgression + stepOfProgression;
             } else {
                 strJ.add("..");
