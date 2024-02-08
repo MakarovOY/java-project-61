@@ -2,7 +2,7 @@
 [![Actions Status](https://github.com/MakarovOY/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/MakarovOY/java-project-61/actions)
 <a href="https://codeclimate.com/github/MakarovOY/java-project-61/maintainability"><img src="https://api.codeclimate.com/v1/badges/64cfbf8daf9fbdaa6de7/maintainability" /></a>
 This App is a 5 console games for training your's brain.
-To srart: make run-dist
+To start: make run-dist
 To check: checkstyleMain 
 https://disk.yandex.ru/i/c6cWWmsl46uC2A
 https://disk.yandex.ru/i/ZkhLiMKcsNmj6Q
