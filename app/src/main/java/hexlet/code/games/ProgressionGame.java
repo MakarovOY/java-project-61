@@ -55,7 +55,7 @@ public class ProgressionGame {
         int stepOfProgression = step;
         for (int i = 0; i < quantityOfNumbers; i++) {
             if (numberOfProgression != numberForReplace) {
-                strJ.add(String.valueOf(numberOfProgression));
+                strJ.add("" + numberOfProgression);
                 numberOfProgression = numberOfProgression + stepOfProgression;
             } else {
                 strJ.add("..");
