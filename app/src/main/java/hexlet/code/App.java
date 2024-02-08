@@ -1,11 +1,12 @@
 package hexlet.code;
 
 
-import hexlet.code.Games.CalcGame;
-import hexlet.code.Games.EvenGame;
-import hexlet.code.Games.GCD;
-import hexlet.code.Games.PrimeGame;
-import hexlet.code.Games.ProgressionGame;
+
+import hexlet.code.games.CalcGame;
+import hexlet.code.games.EvenGame;
+import hexlet.code.games.GCD;
+import hexlet.code.games.PrimeGame;
+import hexlet.code.games.ProgressionGame;
 
 import java.util.Scanner;
 
@@ -38,19 +39,19 @@ public class App {
                 Cli.greet();
                 break;
             case GAME_EVEN:
-                EvenGame.generateGameResult();
+                EvenGame.generateGameInfo();
                 break;
             case GAME_CALC:
-                CalcGame.generateGameResult();
+                CalcGame.generateGameInfo();
                 break;
             case GAME_GCD:
-                GCD.generateGameResult();
+                GCD.generateGameInfo();
                 break;
             case GAME_PROGRESSION:
-                ProgressionGame.generateGameResult();
+                ProgressionGame.generateGameInfo();
                 break;
             case GAME_PRIME:
-                PrimeGame.generateGameResult();
+                PrimeGame.generateGameInfo();
                 break;
             default:
                 System.out.println("You entered wrong number.Try again.");

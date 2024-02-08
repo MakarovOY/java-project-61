@@ -1,4 +1,4 @@
-package hexlet.code.Games;
+package hexlet.code.games;
 
 
 import hexlet.code.GameEngine;
@@ -8,29 +8,26 @@ public class GCD {
     static final int MIN_NUMBER = 2;
     static final int MAX_NUMBER = 50;
 
-    public static void generateGameResult() {
+    public static void generateGameInfo() {
 
-        int firstNumber;
-        int secondNumber;
 
-        String question;
         String gameTask = "Find the greatest common divisor of given numbers.";
-        int rightAnswer;
 
         String[][] roundInfo = new String[GameEngine.MAX_WINS][GameEngine.PAIR_QUESTION_ANSWER];
 
         for (int i = 0; i < roundInfo.length; i++) {
 
-            firstNumber = Util.getRandomNumber(MIN_NUMBER, MAX_NUMBER);
-            secondNumber = Util.getRandomNumber(MIN_NUMBER, MAX_NUMBER);
 
-            rightAnswer = searchCommonGreatestDivisor(firstNumber, secondNumber);
+            int firstNumber = Util.getRandomNumber(MIN_NUMBER, MAX_NUMBER);
+            int secondNumber = Util.getRandomNumber(MIN_NUMBER, MAX_NUMBER);
 
-            question = "" + firstNumber + " " + secondNumber;
+            int  rightAnswer = searchCommonGreatestDivisor(firstNumber, secondNumber);
+
+            String question = "" + firstNumber + " " + secondNumber;
 
             roundInfo[i][0] = question;
 
-            roundInfo[i][1] = "" + rightAnswer;
+            roundInfo[i][1] = String.valueOf(rightAnswer);
 
         }
         GameEngine.playGame(gameTask, roundInfo);

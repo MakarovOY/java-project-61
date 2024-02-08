@@ -10,9 +10,7 @@ public class GameEngine {
     public static void playGame(String gameTask, String[][] roundInfo) {
         int winCount = 0;
         String userName;
-        String question;
-        String rightAnswer;
-        String usersAnswer;
+
 
         Scanner getUsersAnswer = new Scanner(System.in);
 
@@ -25,6 +23,10 @@ public class GameEngine {
         System.out.println(gameTask);
 
         while (winCount < MAX_WINS) {
+
+            String question;
+            String rightAnswer;
+            String usersAnswer;
 
             int roundIndex = winCount;
             question = roundInfo[roundIndex][0];
@@ -40,14 +42,14 @@ public class GameEngine {
             } else {
                 System.out.println("'" + usersAnswer + "' is wrong answer ;(. Correct answer was '" + rightAnswer
                         + "'.\nLet's try again, " + userName + "!");
-                break;
+                return;
 
             }
 
         }
-        if (winCount == MAX_WINS) {
-            System.out.println("Congratulations, " + userName + "!");
-        }
+
+        System.out.println("Congratulations, " + userName + "!");
+
 
     }
 
