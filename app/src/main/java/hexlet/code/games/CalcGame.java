@@ -9,7 +9,7 @@ public class CalcGame {
 
     static final int MAX_RANDOM_NUMBER = 10;
     public static void generateGameInfo() {
-        //ss
+
 
         String gameTask = "What is the result of the expression?";
 
